@@ -33,4 +33,29 @@ public class LinkedList {
             current = current.next;
         } while (current != null);
     }
+    
+    public void addElement(int num) {
+        Node newElement = new Node(num);
+        Node current = root;
+        while (current.next != null) {
+            current = current.next;
+        }
+        current.next = newElement;
+    }
+    
+    public void removeElement(int num) {
+        if (root.number == num) {
+            root = root.next;
+            return;
+        }
+        Node current = root.next;
+        Node previous = root;
+        while (current != null) {
+            if (current.number == num) {
+                previous.next = current.next;
+            }
+            previous = current;
+            current = current.next;
+        }
+    }
 }

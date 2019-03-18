@@ -20,6 +20,12 @@ public class AlgorithmAndDS {
         // TODO code application logic here
         LinkedList list = new LinkedList();
         list.printLinkedList();
+        System.out.print("\n");
+        list.addElement(6);
+        list.printLinkedList();
+        System.out.print("\n");
+        list.removeElement(3);
+        list.printLinkedList();
     }
     
 }
